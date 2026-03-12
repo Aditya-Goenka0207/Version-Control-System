@@ -1,0 +1,92 @@
+.repo-page-wrapper {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #161b22;
+  border-radius: 10px;
+  color: white;
+}
+
+.repo-page-wrapper h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #58a6ff;
+}
+
+.repo-page-wrapper label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.repo-page-wrapper textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  background: #0d1117;
+  color: white;
+  resize: vertical;
+  min-height: 60px;
+}
+
+.repo-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.repo-buttons button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #238636;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.repo-buttons button:hover {
+  background: #2ea043;
+}
+
+.repo-buttons button[style*="red"] {
+  background: #cf222e;
+}
+
+.repo-buttons button[style*="red"]:hover {
+  background: #a40e26;
+}
+
+.repo-page-wrapper p {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #8b949e;
+}
+
+.repo-page-wrapper ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.repo-page-wrapper li {
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 700px) {
+  .repo-page-wrapper {
+    margin: 30px 15px;
+    padding: 20px;
+  }
+
+  .repo-buttons {
+    flex-direction: column;
+  }
+
+  .repo-buttons button {
+    width: 100%;
+  }
+}

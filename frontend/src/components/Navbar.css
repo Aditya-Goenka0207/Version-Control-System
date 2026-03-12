@@ -1,0 +1,83 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 10px 20px; 
+  border-bottom: 2px solid white;
+  position: relative; 
+}
+
+nav img {
+  height: 50px;
+  border-radius: 100%;
+}
+
+nav div {
+  display: flex;
+  align-items: center; 
+}
+
+nav h3 {
+  margin-left: 15px;
+  color: white;
+}
+
+nav p {
+  margin-left: 50px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer; 
+}
+
+nav h3:hover,
+nav p:hover {
+  text-decoration: underline;
+}
+
+/* -------- MOBILE MENU BUTTON -------- */
+
+.hamburger {
+  display: none; 
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* -------- TABLET -------- */
+
+@media screen and (max-width: 768px) {
+
+  nav p {
+    margin-left: 20px; 
+  }
+
+}
+
+/* -------- MOBILE -------- */
+
+@media screen and (max-width: 600px) {
+
+  .hamburger {
+    display: block; 
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #0d1117;
+    width: 200px;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links p {
+    margin-left: 0; 
+  }
+}

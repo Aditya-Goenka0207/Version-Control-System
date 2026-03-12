@@ -1,0 +1,19 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Custom folders
+.apnaGit/
+
+# Text files you don't want
+hello.txt
+new.txt

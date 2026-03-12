@@ -1,0 +1,47 @@
+#dashboard {
+  display: flex;
+  width: 1080px;
+  max-width: 100%; 
+  margin: 0 auto; 
+  justify-content: space-between;
+  gap: 20px; 
+  padding: 20px; 
+}
+
+#dashboard aside {
+  flex: 1;
+  min-width: 200px;
+}
+
+#dashboard main {
+  flex: 2;
+  min-width: 300px;
+}
+
+/* -------- TABLET RESPONSIVE -------- */
+@media screen and (max-width: 900px) {
+  #dashboard {
+    flex-wrap: wrap;
+  }
+
+  #dashboard aside {
+    flex: 1 1 45%;
+  }
+
+  #dashboard main {
+    flex: 1 1 100%;
+  }
+}
+
+/* -------- MOBILE RESPONSIVE -------- */
+@media screen and (max-width: 600px) {
+  #dashboard {
+    flex-direction: column;
+    width: 100%; 
+  }
+
+  #dashboard aside,
+  #dashboard main {
+    width: 100%;
+  }
+}
