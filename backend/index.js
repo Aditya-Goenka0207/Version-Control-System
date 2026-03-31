@@ -100,7 +100,7 @@ function startServer() {
   const httpServer = http.createServer(app);
   const io = new Server(httpServer, {
     cors: {
-      origin: "*",
+      origin: "https://github-frontend-z0j1.onrender.com",
       methods: ["GET", "POST"],
     },
   });
