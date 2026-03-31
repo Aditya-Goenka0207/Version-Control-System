@@ -20,7 +20,7 @@ const RepoPage = () => {
   const fetchRepo = async () => {
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:3000/repo/${id}`, {
+      const res = await axios.get(`https://github-backend-15g0.onrender.com/repo/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setRepo(res.data);
@@ -43,7 +43,7 @@ const RepoPage = () => {
       if (newContent) updateData.content = [newContent];
 
       const res = await axios.put(
-        `http://localhost:3000/repo/update/${id}`,
+        `https://github-backend-15g0.onrender.com/repo/update/${id}`,
         updateData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -65,7 +65,7 @@ const RepoPage = () => {
     setUpdating(true);
     try {
       const res = await axios.patch(
-        `http://localhost:3000/repo/toggle/${id}`,
+        `https://github-backend-15g0.onrender.com/repo/toggle/${id}`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -84,7 +84,7 @@ const RepoPage = () => {
     if (!window.confirm("Are you sure you want to delete this repository?")) return;
 
     try {
-      await axios.delete(`http://localhost:3000/repo/delete/${id}`, {
+      await axios.delete(`https://github-backend-15g0.onrender.com/repo/delete/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("Repository deleted!");

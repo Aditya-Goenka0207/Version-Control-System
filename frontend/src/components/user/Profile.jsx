@@ -28,7 +28,7 @@ const Profile = () => {
     if (!userId) return;
 
     try {
-      const res = await axios.get(`http://localhost:3000/userProfile/${userId}`);
+      const res = await axios.get(`https://github-backend-15g0.onrender.com/userProfile/${userId}`);
       setUserDetails(res.data || {});
     } catch (err) {
       console.error("Cannot fetch user details:", err.response?.data || err.message);
@@ -44,7 +44,7 @@ const Profile = () => {
     setErrorRepos("");
 
     try {
-      const res = await axios.get(`http://localhost:3000/repo/user/${userId}`);
+      const res = await axios.get(`https://github-backend-15g0.onrender.com/repo/user/${userId}`);
       setRepos(res.data || []);
     } catch (err) {
       console.error("Cannot fetch repositories:", err.response?.data || err.message);
@@ -67,7 +67,7 @@ const Profile = () => {
     if (!window.confirm("Are you sure you want to delete this repository?")) return;
 
     try {
-      await axios.delete(`http://localhost:3000/repo/delete/${repoId}`);
+      await axios.delete(`https://github-backend-15g0.onrender.com/repo/delete/${repoId}`);
       fetchUserRepos();
     } catch (err) {
       console.error(err.response?.data || err.message);
@@ -78,7 +78,7 @@ const Profile = () => {
   // Toggle visibility
   const toggleVisibility = async (repoId) => {
     try {
-      await axios.patch(`http://localhost:3000/repo/toggle/${repoId}`);
+      await axios.patch(`https://github-backend-15g0.onrender.com/repo/toggle/${repoId}`);
       fetchUserRepos();
     } catch (err) {
       console.error(err.response?.data || err.message);
@@ -92,7 +92,7 @@ const Profile = () => {
     if (!newDesc) return;
 
     try {
-      await axios.put(`http://localhost:3000/repo/update/${repoId}`, {
+      await axios.put(`https://github-backend-15g0.onrender.com/repo/update/${repoId}`, {
         description: newDesc,
       });
       fetchUserRepos();

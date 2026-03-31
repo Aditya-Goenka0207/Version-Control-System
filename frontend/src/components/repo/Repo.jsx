@@ -22,7 +22,7 @@ const Repo = () => {
       const isPublic = visibility === "public";
 
       const res = await axios.post(
-        "http://localhost:3000/repo/create",
+        "https://github-backend-15g0.onrender.com/repo/create",
         {
           name: repoName,
           description,
